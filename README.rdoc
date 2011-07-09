@@ -38,6 +38,9 @@ When defining a range, Timecode will output a random time within range defined:
 
 Please note: Only the basic for has been implemented already.
 
+
+== Examples
+
 Some usage examples:
 
   7@21                                # each 7th of each month at 21:00
