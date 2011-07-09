@@ -61,15 +61,15 @@ When defining a range, Timecode will output a random time within range defined:
 Some syntax examples:
 
 ```ruby
-  "7@21"                              # each 7th of each month at 21:00
-  "7@21:00"                           # each 7th of each month at 21:00
-  "12/7@21:00"                        # each 7th of each december at 21:00
-  "2011/12/07@21:00"                  # on 7th of december 2011 at 21:00
-  "2011/12/07,23@21:00"               # on 7th and 23rd of december 2011 at 21:00
-  "2011/12/07-23@21:00"               # between 7th and 23rd of december 2011 at 21:00
-  "2011/11,12/07-23@21:00"            # between 7th and 23rd of november and between 7th and 23rd of december 2011 at 21:00
-  "2011/11-12/07-23@21:00"            # between 7th and 23rd of november or december 2011 at 21:00
-  "2011/12/07,2012/01/04@21:00,22:30" # on 7th of december 2011 and on 4th of january 2012 at 21:00 and 22:30
+"7@21"                              # each 7th of each month at 21:00
+"7@21:00"                           # each 7th of each month at 21:00
+"12/7@21:00"                        # each 7th of each december at 21:00
+"2011/12/07@21:00"                  # on 7th of december 2011 at 21:00
+"2011/12/07,23@21:00"               # on 7th and 23rd of december 2011 at 21:00
+"2011/12/07-23@21:00"               # between 7th and 23rd of december 2011 at 21:00
+"2011/11,12/07-23@21:00"            # between 7th and 23rd of november and between 7th and 23rd of december 2011 at 21:00
+"2011/11-12/07-23@21:00"            # between 7th and 23rd of november or december 2011 at 21:00
+"2011/12/07,2012/01/04@21:00,22:30" # on 7th of december 2011 and on 4th of january 2012 at 21:00 and 22:30
 ```
 
 ## TODO
@@ -77,7 +77,7 @@ Some syntax examples:
 * Allow range input
 * Allow list input
 * Allow precision option: `:seconds` or `:miliseconds`
-* Add method #explain to print timecode in words
+* Add method `explain` to print timecode in words
 
 
 ## Copyright
