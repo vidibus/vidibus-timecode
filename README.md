@@ -7,7 +7,7 @@ This gem is part of [Vidibus](http://vidibus.org), an open source toolset for bu
 
 ## Installation
 
-Add `ruby gem "vidibus-timecode"` to your Gemfile. Then call `bundle install` on your console.
+Add `gem "vidibus-timecode"` to your Gemfile. Then call `bundle install` on your console.
 
 
 ## Usage
@@ -56,9 +56,9 @@ When defining a range, Timecode will output a random time within range defined:
 **Please note:** Only the basic for has been implemented already.
 
 
-## Examples
+### Examples
 
-Some usage examples:
+Some syntax examples:
 
 ```ruby
   "7@21"                              # each 7th of each month at 21:00
@@ -76,10 +76,10 @@ Some usage examples:
 
 * Allow range input
 * Allow list input
-* Allow precision option: :seconds or :miliseconds
+* Allow precision option: `:seconds` or `:miliseconds`
 * Add method #explain to print timecode in words
 
 
 ## Copyright
 
-Copyright (c) 2011 Andre Pankratz. See LICENSE for details.
+&copy; 2011 Andre Pankratz. See LICENSE for details.
