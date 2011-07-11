@@ -78,6 +78,7 @@ Some syntax examples:
 * Allow list input
 * Allow precision option: `:seconds` or `:miliseconds`
 * Add method `explain` to print timecode in words
+* Allow timecodes without date or time: `"@21" # everyday at 21:00`
 
 
 ## Copyright
