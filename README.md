@@ -88,10 +88,7 @@ In the future Vidibus::Timecode will be able to handle collections, ranges and r
 "2011/11+12/07-23@21:00"
 
 # between 7th and 23rd of november or december 2011 at 21:00
-"2011/11-12/07-23@21:00"
-
-# on 7th of december 2011 and on 4th of january 2012 at 21:00 and 22:30
-"2011/12/07+2012/01/04@21:00+22:30"
+"2011/11,12/07-23@21:00"
 ```
 
 
