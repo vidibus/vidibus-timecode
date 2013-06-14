@@ -46,14 +46,6 @@ But timecodes may also be used to define repeating times, like cron. Timcode wil
 ```ruby
 "7@21:00" # next 7th of a month, e.g. Thu Jul 07 21:00:00 +0200 2011
 ```
-  
-When defining a range, Timecode will output a random time within range defined:
-
-```ruby
-"2011/12/07@21:00-23:55" # e.g. Wed Dec 07 22:13:45 +0100 2011
-```
-
-**Please note:** Only the basic for has been implemented already.
 
 
 ### Examples
@@ -61,16 +53,47 @@ When defining a range, Timecode will output a random time within range defined:
 Some syntax examples:
 
 ```ruby
-"7@21"                              # each 7th of each month at 21:00
-"7@21:00"                           # each 7th of each month at 21:00
-"12/7@21:00"                        # each 7th of each december at 21:00
-"2011/12/07@21:00"                  # on 7th of december 2011 at 21:00
-"2011/12/07,23@21:00"               # on 7th and 23rd of december 2011 at 21:00
-"2011/12/07-23@21:00"               # between 7th and 23rd of december 2011 at 21:00
-"2011/11,12/07-23@21:00"            # between 7th and 23rd of november and between 7th and 23rd of december 2011 at 21:00
-"2011/11-12/07-23@21:00"            # between 7th and 23rd of november or december 2011 at 21:00
-"2011/12/07,2012/01/04@21:00,22:30" # on 7th of december 2011 and on 4th of january 2012 at 21:00 and 22:30
+# each 7th of every month at 21:00
+"7@21"
+
+# each 7th of every month at 21:00
+"7@21:00"
+
+# each 7th of december every year at 21:00
+"12/7@21:00"
+
+# on 7th of december 2011 at 21:00
+"2011/12/07@21:00"
 ```
+
+
+### More Examples (not implemented yet)
+
+In the future Vidibus::Timecode will be able to handle collections, ranges and random times:
+
+```ruby
+# on 7th and 23rd of december 2011 at 21:00
+"2011/12/07+23@21:00"
+
+# from 7th to 23rd of december 2011 at 21:00
+"2011/12/07-23@21:00"
+
+# on 7th or 23rd of december 2011 at 21:00
+"2011/12/07,23@21:00"
+
+# on one day between 7th and 23rd of december 2011 at 21:00
+"2011/12/07~23@21:00"
+
+# from 7th to 23rd of november and from 7th to 23rd of december 2011 at 21:00
+"2011/11+12/07-23@21:00"
+
+# between 7th and 23rd of november or december 2011 at 21:00
+"2011/11-12/07-23@21:00"
+
+# on 7th of december 2011 and on 4th of january 2012 at 21:00 and 22:30
+"2011/12/07+2012/01/04@21:00+22:30"
+```
+
 
 ## TODO
 
