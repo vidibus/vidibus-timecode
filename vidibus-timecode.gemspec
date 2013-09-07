@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.homepage    = "https://github.com/vidibus/vidibus-timecode"
   s.summary     = "Timecodes are a simple, yet powerful way to notate times."
   s.description = "Timecodes may be used to describe single, definite times or multiple, even random times."
+  s.license     = 'MIT'
 
   s.required_rubygems_version = ">= 1.3.6"
   s.rubyforge_project         = "vidibus-timecode"
