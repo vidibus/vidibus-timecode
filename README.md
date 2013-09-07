@@ -96,7 +96,8 @@ In the future Vidibus::Timecode will be able to handle collections, ranges and r
 
 * Allow range input
 * Allow list input
-* Allow precision option: `:seconds` or `:miliseconds`
+* Allow precision option: `:miliseconds`
+* Make precision `:seconds` default
 * Add method `explain` to print timecode in words
 * Allow timecodes without date or time: `"@21" # everyday at 21:00`
 
