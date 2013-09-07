@@ -1,6 +1,6 @@
 module Vidibus
   class Timecode
-    VERSION = "0.1.0"
+    VERSION = '0.1.1'
 
     YEAR_REGEXP = /(\d{3,4}(?:[,\-]\d{3,4})?)/
     MONTH_REGEXP = /(\d{1,2}(?:[,\-]\d{1,2})?)/
