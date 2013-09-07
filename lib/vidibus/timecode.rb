@@ -6,20 +6,24 @@ module Vidibus
     MONTH_REGEXP = /(\d{1,2}(?:[,\-]\d{1,2})?)/
     DAY_REGEXP = /(\d{1,2}(?:[,\-]\d{1,2})?)/
     TIME_REGEXP = /(\d{1,2}(?:[,\-]\d{1,2})?)/
-    REGEXP = /^(?:#{YEAR_REGEXP}\/)?(?:#{MONTH_REGEXP}\/)?#{DAY_REGEXP}@#{TIME_REGEXP}(?:\:#{TIME_REGEXP}){0,2}$/
+    REGEXP = /^(?:#{YEAR_REGEXP}\/)?(?:#{MONTH_REGEXP}\/)?#{DAY_REGEXP}@#{TIME_REGEXP}(?:\:#{TIME_REGEXP})?(?:\:#{TIME_REGEXP})?$/
 
     class Error < StandardError; end
     class InputError < Error; end
     class FormatError < Error; end
 
     def initialize(*args)
-      options = extract_options!(args)
+      @options = extract_options!(args) || {}
       @input = args.first or raise_input_error
       process_input
     end
 
     def timecode
-      @timecode ||= @time.strftime("%Y/%m/%d@%H:%M")
+      @timecode ||= begin
+        format = '%Y/%m/%d@%H:%M'
+        format << ':%S' if @options[:precision].to_s == 'seconds'
+        @time.strftime(format)
+      end
     end
 
     def time
@@ -50,8 +54,9 @@ module Vidibus
         day = m[3]
         hour = m[4].to_i
         minute = m[5].to_i
+        second = m[6].to_i
 
-        Time.local(year, month, day, hour, minute).tap do |time|
+        Time.local(year, month, day, hour, minute, second).tap do |time|
           time.in_time_zone if time.respond_to?(:in_time_zone)
         end
       else

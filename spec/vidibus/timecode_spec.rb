@@ -37,6 +37,15 @@ describe "Vidibus::Timecode" do
     it "should return a local time object by default" do
       this.time.should eql(time.localtime)
     end
+
+    context 'with seconds' do
+      let(:time) { Time.parse('2011-12-07 21:00:39') }
+      let(:timecode) { '2011/12/07@21:00:39' }
+
+      it "should return the timecode of a given time" do
+        this.time.should eql(time.localtime)
+      end
+    end
   end
 
   describe "#timecode" do
@@ -48,6 +57,16 @@ describe "Vidibus::Timecode" do
 
     it "should return the timecode of a given time" do
       this.timecode.should eql(timecode)
+    end
+
+    context 'with precision: :seconds' do
+      let(:time) { Time.parse('2011-12-07 21:00:39') }
+      let(:timecode) { '2011/12/07@21:00:39' }
+      let(:this) { Vidibus::Timecode.new(time, precision: :seconds) }
+
+      it "should return the timecode of a given time" do
+        this.timecode.should eql(timecode)
+      end
     end
   end
 
