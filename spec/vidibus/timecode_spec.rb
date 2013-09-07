@@ -18,7 +18,8 @@ describe "Vidibus::Timecode" do
     end
 
     it "should raise an FormatError for invalid Timecode input" do
-      expect {Vidibus::Timecode.new("2011/12/07")}.to raise_error(Vidibus::Timecode::FormatError)
+      expect {Vidibus::Timecode.new("2011/12/07")}.
+        to raise_error(Vidibus::Timecode::FormatError)
     end
   end
 
