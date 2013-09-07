@@ -10,11 +10,11 @@ describe "Vidibus::Timecode" do
     end
 
     it "should accept a Time" do
-      expect {Vidibus::Timecode.new(time)}.not_to raise_error(Vidibus::Timecode::InputError)
+      expect {Vidibus::Timecode.new(time)}.not_to raise_error
     end
 
     it "should accept a Timecode string" do
-      expect {Vidibus::Timecode.new(timecode)}.not_to raise_error(Vidibus::Timecode::InputError)
+      expect {Vidibus::Timecode.new(timecode)}.not_to raise_error
     end
 
     it "should raise an FormatError for invalid Timecode input" do
