@@ -1,4 +1,4 @@
-# Vidibus::Timecode [![](http://travis-ci.org/vidibus/vidibus-timecode.png)](http://travis-ci.org/vidibus/vidibus-timecode)
+# Vidibus::Timecode [![Build Status](https://travis-ci.org/vidibus/vidibus-timecode.png)](https://travis-ci.org/vidibus/vidibus-timecode)
 
 Timecodes are a simple, yet powerful way to notate times.
 
