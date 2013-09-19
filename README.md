@@ -104,4 +104,4 @@ In the future Vidibus::Timecode will be able to handle collections, ranges and r
 
 ## Copyright
 
-&copy; 2011 Andre Pankratz. See LICENSE for details.
+&copy; 2011-2013 Andre Pankratz. See LICENSE for details.
